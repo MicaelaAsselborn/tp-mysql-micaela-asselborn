@@ -1,0 +1,5 @@
+-- Ejercicio 7 – Actualizar registros
+--Realizar las siguientes actualizaciones: 
+-- 1.  Cambiar la dirección de un dueño (por ID o nombre).  
+-- 2.  Actualizar la especialidad de un veterinario (por ID o matrícula).  
+-- 3.  Editar la descripción de un historial clínico (por ID).
