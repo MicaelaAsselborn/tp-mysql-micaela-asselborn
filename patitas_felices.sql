@@ -1,6 +1,8 @@
 -- Ejercicio 1 – Crear Base de Datos
 CREATE DATABASE patitas_felices;
 
+USE patitas_felices;
+
 -- Ejercicio 2 – Crear tabla duenos
 CREATE TABLE
     duenos (
@@ -45,3 +47,66 @@ CREATE TABLE
     );
 
 -- Ejercicio 6 – Insertar registros
+--Insertar: 
+--  3 dueños con información completa  
+--  3 mascotas, cada una asociada a un dueño  
+--  2 veterinarios con especialidades distintas  
+--  3 registros de historial clínico
+INSERT INTO
+    duenos (nombre, apellido, telefono, direccion)
+VALUES
+    (
+        "Francisco",
+        "Salinas",
+        "2996840349",
+        "Osa Mayor 123"
+    ),
+    (
+        "Caterine",
+        "Stephens",
+        "2946842799",
+        "Pasaje de la Paz 281"
+    ),
+    (
+        "Gaston",
+        "Diaz",
+        "2976558274",
+        "Los Alerces 1215"
+    );
+
+INSERT INTO
+    mascotas (nombre, especie, fecha_nacimiento, id_dueno)
+VALUES
+    ("Shiro", "Gato", "2017-06-06", 1),
+    ("Firulais", "Perro", "2024-07-15", 2),
+    ("Manchita", "Perro", "2010-05-02", 3);
+
+INSERT INTO
+    veterinarios (nombre, apellido, matricula, especialidad)
+VALUES
+    ("Victor", "Gonzales", "WH8C474", "Cirugia"),
+    ("Patricia", "Martinez", "KL66PH7", "Dermatologia");
+
+INSERT INTO
+    historial_clinico (
+        id_mascota,
+        id_veterinario,
+        fecha_nacimiento,
+        descripcion
+    )
+VALUES
+    (
+        1,
+        1,
+        "2025-11-26",
+        "Paciente produce bolas de pelos descomunalmente grandes"
+    ),
+    (2, 1, DEFAULT, "Paciente para castracion"),
+    (
+        3,
+        2,
+        "2024-03-02",
+        "Paciente presenta sarpullido en el lomo"
+    );
+
+-- Ejercicio 7 – Actualizar registros
