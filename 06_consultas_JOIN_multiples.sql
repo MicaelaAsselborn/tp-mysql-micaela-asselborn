@@ -16,5 +16,7 @@ SELECT
 FROM
     historial_clinico h
     JOIN mascotas m ON h.id_mascota = m.id
-    JOIN duenos d ON m.id = d.id
-    JOIN veterinarios v ON h.id_veterinario = v.id;
+    JOIN duenos d ON m.id_dueno = d.id
+    JOIN veterinarios v ON h.id_veterinario = v.id
+ORDER BY
+    h.fecha_registro DESC;
