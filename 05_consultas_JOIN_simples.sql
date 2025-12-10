@@ -1,0 +1,5 @@
+-- Ejercicio 9 – JOIN simple 
+-- Consulta que muestre: 
+--  Nombre de la mascota  
+--  Especie  
+--  Nombre completo del dueño (nombre + apellido)
