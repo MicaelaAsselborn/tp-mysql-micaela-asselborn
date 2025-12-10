@@ -1,0 +1,8 @@
+-- Ejercicio 10 – JOIN múltiple con historial 
+-- Consulta que muestre todas las entradas del historial clínico con: 
+--   Nombre y especie de la mascota  
+--   Nombre completo del dueño  
+--   Nombre completo del veterinario  
+--   Fecha de registro  
+--   Descripción  
+-- Ordenados por fecha de registro descendente (DESC).
