@@ -6,17 +6,14 @@
 --   Fecha de registro  
 --   Descripción  
 -- Ordenados por fecha de registro descendente (DESC).
-SELECT
-    m.nombre AS mascota,
+SELECT m.nombre AS mascota,
     m.especie,
     CONCAT (d.nombre, " ", d.apellido) AS dueno,
     CONCAT (v.nombre, " ", v.apellido) AS doctor,
     h.fecha_registro,
     h.descripcion AS consulta
-FROM
-    historial_clinico h
+FROM historial_clinico h
     JOIN mascotas m ON h.id_mascota = m.id
     JOIN duenos d ON m.id_dueno = d.id
     JOIN veterinarios v ON h.id_veterinario = v.id
-ORDER BY
-    h.fecha_registro DESC;
+ORDER BY h.fecha_registro DESC;

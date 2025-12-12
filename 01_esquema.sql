@@ -45,7 +45,7 @@ CREATE TABLE
         id_veterinario INT,
         fecha_registro DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
         descripcion VARCHAR(250) NOT NULL,
-        FOREIGN KEY (id_mascota) REFERENCES mascotas (id) ON DELETE CASCADE,
+        FOREIGN KEY (id_mascota) REFERENCES mascotas (id) ON DELETE CASCADE, -- Se agrega el CASCADE para que cuando se elimine el registro de la mascota, tambien se elimine el historial clinico relacionado.
         FOREIGN KEY (id_veterinario) REFERENCES veterinarios (id),
         INDEX idx_historial_mascota (id_mascota),
         INDEX idx_historial_veterinario (id_veterinario)
