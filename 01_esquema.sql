@@ -1,6 +1,7 @@
 -- Ejercicio 1 – Crear Base de Datos
 CREATE DATABASE veterinaria_patitas_felices;
 
+-- Selecciona la base de datos vaterinaria_patitas_felices
 USE veterinaria_patitas_felices;
 
 -- Ejercicio 2 – Crear tabla duenos
@@ -22,9 +23,7 @@ CREATE TABLE
         fecha_nacimiento DATE,
         id_dueno INT,
         FOREIGN KEY (id_dueno) REFERENCES duenos (id),
-        INDEX idx_mascota_dueno (id_dueno),
-        INDEX idx_mascota_nombre (nombre),
-        INDEX idx_mascota_especie (especie)
+        INDEX idx_mascota_dueno (id_dueno) -- Se agrega index para mejorar performance
     );
 
 -- Ejercicio 4 – Crear tabla veterinarios
